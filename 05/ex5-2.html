@@ -11,12 +11,18 @@
 
     <script>
         $().ready(function () {
-            setInterval(doSelect, 2000);
+            doSelect();
+        })
+
+        $().ready(function () {
+            setInterval(doSelect, 2000)
         })
 
         function button1Pressed() {
             doInsert();
         }
+
+        setInterval(doSelect, 2000);
 
         async function doInsert() {
             var userid = document.getElementById('tf1').value;
